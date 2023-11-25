@@ -1,0 +1,76 @@
+@import './base.css';
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  padding: 0 30px;
+  max-width: 1225px;
+}
+a {
+  text-decoration: none;
+  color: #00bd7e;
+  transition: 0.3s ease-in-out;
+}
+a:hover {
+  text-decoration: underline;
+}
+.btn {
+  text-align: center;
+  font-size: 1.6em;
+  border: none;
+  padding: 15px 25px;
+  border: 2px solid #00bd7e;
+  border-radius: 4px;
+  color: #fff;
+  background-color: #00bd7e;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  font-weight: bold;
+}
+.btn:hover {
+  color: #00bd7e;
+  background-color: #fff;
+}
+
+.loading {
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100px;
+  margin: auto;
+  width: 80px;
+  height: 80px;
+  z-index: 2;
+}
+
+.loading div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #00bd7e;
+  border-radius: 50%;
+  animation: loading 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #00bd7e transparent transparent transparent;
+}
+.loading div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.loading div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.loading div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
