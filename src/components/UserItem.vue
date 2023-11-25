@@ -1,7 +1,7 @@
 <template>
   <div class="user">
     <div class="user__img">
-      <img :src="user.avatar" />
+      <ProgressiveImage :src="user.avatar" :alt="user.first_name" :title="user.first_name" customClass="user__picture" />
     </div>
     <h3 class="user__name">{{ user.first_name }} {{ user.last_name }}</h3>
     <a :href="`mailto:${user.email}`">{{ user.email }}</a>
@@ -16,7 +16,7 @@ defineProps<{
 }>()
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .user {
   width: 300px;
   text-align: center;
@@ -28,15 +28,15 @@ defineProps<{
     padding-top: 50%;
     padding-bottom: 50%;
     margin-bottom: 10px;
-    img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      margin: auto;
-      max-width: 100%;
-    }
+  }
+  &__picture {
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
   }
   &__name {
     font-size: 1.1em;
